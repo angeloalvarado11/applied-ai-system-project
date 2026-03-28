@@ -29,6 +29,11 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+- My system uses most features provided by the CSV, and will be listed by order of
+  importance: Energy, Mood, Tempo, Valence, Danceability, Acousticness, and Genre Match.
+- My Song objects will use the features above to represent itself, and UserProfile will use Favorite Genre, Favorite Mood, Target Energy, and Likes Acoustic. These are all data types that represents various data that can be used to recommend similar music to a user's taste.
+- My Recommender uses a simple weight equation system to compute a score for each song. Energy has the highest weight in recommendation, while Genre Match has the lowest. These songs get scored independently against the user profile. A 1 is a perfect match to a user's preference, while a 0 is a worst possible match. From the CSVs, we calculate a score for each song using a distance-based forumla. Any song scoring close to 1 are better fits for the UserProfile. 
+
 ---
 
 ## Getting Started
